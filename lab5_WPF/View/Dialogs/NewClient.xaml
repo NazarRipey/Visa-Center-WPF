@@ -1,0 +1,31 @@
+﻿<Window x:Class="lab5_WPF.View.Dialogs.NewClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab5_WPF.View.Dialogs"
+        mc:Ignorable="d"
+        Title="NewClient" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition MinHeight="60"/>
+            <RowDefinition MinHeight="60"/>
+            <RowDefinition MinHeight="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock>Client name:</TextBlock>
+            <TextBox Name="ClientName" MinWidth="250"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <TextBlock>Client city:</TextBlock>
+            <TextBox Name="ClientCity" MinWidth="250"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <TextBlock>Client email:</TextBlock>
+            <TextBox Name="ClientEmail" MinWidth="250"></TextBox>
+        </StackPanel>
+
+        <Button Grid.Row="3" Height="25" Content="Add" Width="80" Click="Button_Click"/>
+    </Grid>
+</Window>

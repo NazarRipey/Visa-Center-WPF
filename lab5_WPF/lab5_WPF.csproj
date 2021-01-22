@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Buttons\Add.png" />
+    <None Remove="Images\Buttons\Decide.jpg" />
+    <None Remove="Images\Buttons\Decide.png" />
+    <None Remove="Images\Buttons\Manager.png" />
+    <None Remove="Images\Buttons\User.jpg" />
+    <None Remove="Images\Buttons\Visa.jpg" />
+    <None Remove="Images\Status\Approved.png" />
+    <None Remove="Images\Status\Declined.png" />
+    <None Remove="Images\Status\InProgress.png" />
+    <None Remove="Images\Styles\bg.jpg" />
+    <None Remove="Sounds\denied.mp3" />
+    <None Remove="Sounds\success.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Buttons\Add.png" />
+    <Resource Include="Images\Buttons\Decide.jpg" />
+    <Resource Include="Images\Buttons\Manager.png" />
+    <Resource Include="Images\Buttons\User.jpg" />
+    <Resource Include="Images\Buttons\Visa.jpg" />
+    <Resource Include="Images\Status\Approved.png" />
+    <Resource Include="Images\Status\Declined.png" />
+    <Resource Include="Images\Status\InProgress.png" />
+    <Resource Include="Images\Styles\bg.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sounds\denied.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sounds\success.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Converter\ControlVisibility.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Converter\ImagePathConverter.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+</Project>
